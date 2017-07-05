@@ -1,1 +1,8 @@
 <h1>this is the index view of the places controller</h1>
+<h2><% @places.each do |place|%></h2>
+<div>
+  <h1><%= place.name %></h1>
+  <i><%= place.address %></i>
+  <p><%= place.description %></p>
+</div>
+<% end%>
