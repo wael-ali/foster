@@ -1,8 +1,21 @@
 <h1>this is the index view of the places controller</h1>
-<h2><% @places.each do |place|%></h2>
-<div>
-  <h1><%= place.name %></h1>
-  <i><%= place.address %></i>
-  <p><%= place.description %></p>
+<% @places.each do |place| %>
+  <div class="booyah-box col-10 offset-1">
+    <h1><%= place.name %></h1>
+    <i><small><%= place.address %></small></i><br /><br />
+    <p><%= place.description %></p><br />
+  </div>
+
+<!--<div class="card w-75 card-inverse card-info col-10 offset-1">
+  <div class="card-block">
+    <h3 class="card-title"><%= place.name %></h3>
+    <p class="card-text"><%= place.address %><br><br>
+    <%= place.description %></p>
+    <a href="#" class="btn btn-primary">Button</a>
+  </div>
 </div>
+-->
+
+
+
 <% end%>
