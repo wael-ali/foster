@@ -6,7 +6,7 @@
   box-shadow: 1px 1px 2px 0 #d0d0d0;
   background: #fff;
   border: 1px solid #ccc;
-  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  border-color: #e4e4e4 #bebebd #bebebd #333;
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
@@ -15,4 +15,14 @@
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background: image-url('dark_mosaic.png');
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+
+}
+.navbar {
+  background-image: image-url('dark_mosaic.png');
+  box-shadow: 1px 2px 4px #ffffff;  
 }
