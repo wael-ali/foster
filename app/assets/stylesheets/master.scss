@@ -1,5 +1,10 @@
 @import "bootstrap";
-
+/*this is the google fonts way-
+we have to comment it when we use the advanced way 
+with squirl*/
+/*
+@import url('https://fonts.googleapis.com/css?family=Frijole');
+*/
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -10,6 +15,7 @@
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
+  background-color: #ffcc00;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,4 +31,12 @@ body {
 .navbar {
   background-image: image-url('dark_mosaic.png');
   box-shadow: 1px 2px 4px #ffffff;  
+}
+.navbar-inverse .navbar-brand{
+  color: #fc0;
+  /*font-family: 'Frijole', cursivef;*/
+  font-family: 'chunkfiveroman', sans-serif;
+  font-weight: 600;
+  letter-spacing:-0.3px;
+  font-size: 2.5em;
 }
