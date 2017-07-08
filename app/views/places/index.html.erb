@@ -1,6 +1,6 @@
 <h1>this is the index view of the places controller</h1>
 <% @places.each do |place| %>
-  <div class="booyah-box col-10 offset-1">
+  <div class="booyah-box col-8 offset-2">
     <h1><%= place.name %></h1>
     <i><small><%= place.address %></small></i><br /><br />
     <p><%= place.description %></p><br />
@@ -19,3 +19,9 @@
 
 
 <% end%>
+<div class="apple_pagination">
+  <div class="page_info">
+    <%= page_entries_info @places %>
+  </div>
+  <%= will_paginate @places, :container => false %>
+</div>
