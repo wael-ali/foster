@@ -62,3 +62,5 @@ gem 'will_paginate'
 gem  'will_paginate-bootstrap'
 # simple form gem
 gem 'simple_form'
+# gem that is used to git icons in rails
+gem 'font-awesome-rails'
