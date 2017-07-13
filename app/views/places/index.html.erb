@@ -4,17 +4,12 @@
     <h1><%= place.name %></h1>
     <i><small><%= place.address %></small></i><br /><br />
     <p><%= place.description %></p><br />
+    <% if place.user.present? %>
+      <small><%= place.user.email %></small>
+    <% end %>
   </div>
 
-<!--<div class="card w-75 card-inverse card-info col-10 offset-1">
-  <div class="card-block">
-    <h3 class="card-title"><%= place.name %></h3>
-    <p class="card-text"><%= place.address %><br><br>
-    <%= place.description %></p>
-    <a href="#" class="btn btn-primary">Button</a>
-  </div>
-</div>
--->
+
 
 
 
