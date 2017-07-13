@@ -64,3 +64,5 @@ gem  'will_paginate-bootstrap'
 gem 'simple_form'
 # gem that is used to git icons in rails
 gem 'font-awesome-rails'
+# for authintications 
+gem 'devise'
