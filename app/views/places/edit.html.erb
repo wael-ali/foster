@@ -1,0 +1,15 @@
+
+<div class="booyah-box col-8 offset-2">
+<h2> Edit your place Detaeils</h2>
+
+<hr>
+<%= simple_form_for @place do |f| %>
+<%= f.input :name %>
+<%= f.input :address %>
+<%= f.input :description %><br>
+<hr>
+<%= f.submit 'Update', class: 'btn btn-primary' %>
+<%end %> 
+
+
+</div>
