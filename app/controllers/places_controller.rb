@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :new]
+  before_action :authenticate_user!, only: [:create, :new, :edit, :update]
 
   def index
     @places = Place.paginate(:page => params[:page], :per_page => 2)
@@ -18,11 +18,24 @@ class PlacesController < ApplicationController
   end
   def edit
     @place = Place.find(params[:id])
+    if @place.user != current_user
+      return render text: 'Not Allowed', status: :forbidden
+    end
   end
   def update
     @place = Place.find(params[:id])
-    @place.update_attributes(place_params)
-    redirect_to @place
+    if @place.user != current_user
+      return render text: 'Editing NOT Allowed !', status: :forbidden
+    else 
+      @place.update_attributes(place_params)
+      redirect_to @place
+    end
+  end
+  def destroy
+    @place = Place.find(params[:id])
+    @place.destroy
+    redirect_to root_path
+    
   end
 
 
