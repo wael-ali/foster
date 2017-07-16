@@ -50,8 +50,7 @@ class PlacesController < ApplicationController
       redirect_to root_path
     else
       return render text: 'Deleting NOT Allowed', status: :forbidden
-    end
-    
+    end  
   end
 
 
