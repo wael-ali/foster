@@ -66,3 +66,7 @@ gem 'simple_form'
 gem 'font-awesome-rails'
 # for authintications 
 gem 'devise'
+# 
+gem 'geocoder'
+#
+gem 'figaro'
