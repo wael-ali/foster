@@ -52,13 +52,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
 /* footer css */
 .header-font {
   font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -153,4 +146,17 @@ body {
 }
 .footer a {
   color: #78828D
+}
+
+/* the map styles */
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#map {
+  height: 300px;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }

@@ -9,7 +9,43 @@
   <p class=""><%= @place.description %></p>
   <div class="card-footer text-muted">
     E-mail
-  </div><br>
+  </div>
+
+
+
+
+    
+
+
+    <div id="map"></div>
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: -25.363, lng: 131.044};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=An3BMcvCXCeq3quhilhGZeWNo4YaICC0RTctwYgZ3wyCvV9lORrQCkOrsuFCKVc0&callback=initMap">
+    </script>
+
+
+
+
+
+
+
+  <br>
   <% if current_user && current_user == @place.user %>
     <div class="float-right">
       
