@@ -1,5 +1,6 @@
 class Place < ApplicationRecord
   belongs_to :user
+  has_many :comments
 
   geocoded_by :address
   after_validation :geocode
@@ -10,6 +11,8 @@ class Place < ApplicationRecord
   validates :name, presence: true, length: {minimum: 3}
   validates :address, presence: true, length: {minimum: 5}
   validates :description, presence: true, length: {maximum: 200}
+
+
 
 
 

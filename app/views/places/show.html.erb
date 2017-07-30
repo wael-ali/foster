@@ -18,11 +18,11 @@
 
 
     
-    <% if @place.latitude.present? && @place.langitude.present? %>
+    <% if @place.latitude.present? && @place.longitude.present? %>
     <script>
 
       function initMap() {
-        var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.langitude%>};
+        var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude%>};
 
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 12,
