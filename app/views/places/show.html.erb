@@ -22,7 +22,7 @@
     <script>
 
       function initMap() {
-        var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude%>};
+        var myLatLng = {lat: <%= @place.latitude %>, lng: <%=d @place.longitude%>};
 
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 12,
@@ -62,5 +62,48 @@
                       class: 'btn btn-primary' %> 
     </div>
   <% end %>
+  <div class="clear"></div>
+  
   </div>
 </div>
+
+          <hr>
+
+</div>
+<!--comments section-->
+<div class="container">
+<div class="col-xs-12 booyah-box">
+<button class="accordion">Click to Add Comment:</button>
+<div class="panel">
+        <%= simple_form_for @comment, url: '#' do |f| %>
+        <%= f.input :message %>
+        <%= f.input :rating %>
+        <hr>
+        <%= f.submit "Add a Coment", class: 'btn btn-primary' %>
+        <% end %>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  
+  var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+} 
+</script>
